@@ -12,9 +12,9 @@ contract HorseStoreYul {
 
     function readNumberOfHorses() external view returns (uint256) {
         assembly {
-            let num := sload(numberOfHorses.slot)
-            mstore(0, num)
-            return(0, 0x20)
+           let num := sload(numberOfHorses.slot)
+           mstore(0, num)
+           return(0, 0x20)
         }
     }
 }

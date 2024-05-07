@@ -4,11 +4,9 @@
 
 # Horse Store 
 
-This is *not* an audit. This is the codebase of the course for you to learn how compilers and opcodes work. We will be dissecting contracts that you build and tinker with. 
+This is a simple horse-store contract writtern in huff language. This is *not* an audit. This is the codebase to learn how compilers and opcodes work.
 
 We will be using huff, solidity, and yul to do so.
-
-We are also (later) going to use this repo to understand the basics of formal verification. 
 
 # Getting Started
 
@@ -34,8 +32,8 @@ We are also (later) going to use this repo to understand the basics of formal ve
 1. Clone the repo & install dependencies
 
 ```
-git clone https://github.com/Cyfrin/10-horse-store-s23
-cd 10-horse-store-s23
+git clone https://github.com/Badal-Sharma-09/Horse-Store
+cd Horse-Store
 make
 ```
 
@@ -45,17 +43,13 @@ make
 forge test
 ```
 
-# Use
-
-## Compile contracts 
-
-To get the raw bytecode of each contract manually:
-
-To get the exact same as what I get, you'll need to use solc version `Version: 0.8.20+commit.a1b79de6.Darwin.appleclang`. 
-
-```
-huffc src/huff/HorseStore.huff -b
-solc --strict-assembly --optimize --optimize-runs 20000 yul/HorseStoreYul.yul --bin | grep 60 
-solc --optimize --optimize-runs 20000 src/HorseStore.sol --bin | grep 60 
-solc --optimize --optimize-runs 20000 src/HorseStoreYul.sol --bin | grep 60 
-```
+3. How to get bytecode:
+```bash
+ huffc src/horseStoreV1/HorseStore.huff -b
+ ```
+ ```bash
+ huffc src/horseStoreV2/HorseStore.huff -b
+ ```
+ ```bash
+ huffc src/ERC20/ERC20.huff -b
+ ```

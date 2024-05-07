@@ -6,13 +6,14 @@ import {HorseStoreYul} from "../../src/horseStoreV1/HorseStoreYul.sol";
 import {Test, console2} from "forge-std/Test.sol";
 
 abstract contract Base_TestV1 is Test {
-    string public constant horseStoreLocation = "horseStoreV1/HorseStore";
-    HorseStore horseStoreHuff;
-    HorseStoreYul horseStoreYul;
-    HorseStore horseStoreSol;
+string public constant horseStoreLocation = "horseStoreV1/HorseStore";
+HorseStore horseStoreSol;
+HorseStore horseStoreHuff;
+HorseStoreYul horseStoreYul;
 
-    function setUp() public virtual {
-        horseStoreYul = new HorseStoreYul();
-        horseStoreSol = new HorseStore();
-    }
+function setUp() public virtual {
+horseStoreSol = new HorseStore();
+horseStoreYul = new HorseStoreYul();
 }
+}
+
